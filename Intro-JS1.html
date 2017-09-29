@@ -1,0 +1,113 @@
+<script type="text/javascript">
+
+	var student = [];
+	students = ["Jenn", "Nick", "Zach"];
+	students.push("tay");
+	students.push("hay");
+
+	// Every array has a length property. That is always accessible
+	// This is the same as doing len(students)
+
+	console.log(students.length)
+
+	// like python and everyone else, the first index is 0
+	// Any data type can go in any index...
+	// 1. String
+	// 2. array
+	// 3. Object
+	// 4. Boolean
+	// 5. Number
+
+	var nfcSouth = [
+		"Fal",
+		"Saints",
+		"Bucks",
+		"Panthers"
+		];
+
+		// To access an index of an array, use [n]
+	console.log(nfcSouth[0])
+	console.log(nfcSouth[6]) //UNLIKE PYTHON THIS WILL GIVES UNDEFINED
+
+	nfcSouth.push("cowboys");
+	console.log(nfcSouth)
+	// .pop() will remove and return the last element in the array
+	console.log(nfcSouth.pop())
+
+	var atlTeam = [
+		"Thr",
+		"Falc",
+		"Haw",
+		"Bra"
+	]
+	// .shift() will remove and return the first element in the array
+	atlTeam.shift()
+
+	// slice is like list[2:5]... gets a copy, does not change the original and you tell it x and y, where to start an where to finish
+
+	console.log(atlTeam.slice(1,2))
+	console.log(atlTeam)
+
+
+	// When making a true copy, use slice method
+	// atlTeam2 = atlTeam;
+	atlTeam2 = atlTeam.slice(0, atlTeam.length);
+	console.log(atlTeam2)
+	atlTeam2.pop()
+	console.log(atlTeam2)
+	console.log(atlTeam)
+
+	// splice will allow you to add and remove elements from any index
+	// splice args:
+	// 1. where to start(just like slice)
+	// 2. how many to delete
+	// 3. what to insert
+
+	// atlTeam.shift();
+	atlTeam.splice(0,1,"ATL United");
+	console.log(atlTeam)
+
+	// while loop...
+	var numberGuessed = false;
+	while(numberGuessed == false){
+		var userGuess = prompt("Guess a number")
+		if (userGuess == 2){
+			numberGuessed = true;
+		}
+	}
+
+	// for loops
+	// 1st arg = iterator
+	// 2nd arg = condition to keep running
+	// 3rd arg = step at the end of the loop
+	for(let i = 0; i < 100; i++){
+		console.log(i);
+	}
+
+	// let is an ES6 concept
+	// let will make a variable that lasts from { to }
+
+
+	var randName = "Jong"
+	for(let i = 0; i < randName.length; i++){
+		// console.log(randName[i])
+		console.log(randName[randName.length - i - 1])
+	}
+
+
+
+	// A def in python, is a function in javascript
+	function sayHello(){
+		console.log("hello");
+	}
+
+	sayHello();
+
+	function sayHelloName(name){
+		console.log(name);
+	}
+
+	sayHelloName("Yo");
+
+
+</script>
